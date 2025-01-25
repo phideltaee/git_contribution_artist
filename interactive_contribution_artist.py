@@ -116,10 +116,13 @@ def main():
     
     # 1) Gather parameters interactively
     word = interactive_input("1) Word or phrase to 'paint'", default="UpCircle.ai")
-    start_date_str = interactive_input("2) Start date (YYYY-MM-DD)", default="2024-01-01")
-    repeat_count = interactive_input("3) Number of times to repeat pattern", default="3", cast_type=int)
-    repo_name = interactive_input("4) GitHub repo name", default=f"git_artist_paintword_{word}")
-    target_dir = interactive_input("5) Target directory for the new repo", default="../git_artist_repo_v1")
+    # Clean up the word to be a valid repository name
+    cleaned_word = ''.join(e for e in word if e.isalnum() or e in ('-', '_')).strip()
+    
+    repo_name = interactive_input("2) GitHub repo name", default=f"git_artist_paintword_{cleaned_word}")
+    start_date_str = interactive_input("3) Start date (YYYY-MM-DD)", default="2024-01-01")
+    repeat_count = interactive_input("4) Number of times to repeat pattern", default="3", cast_type=int)
+    target_dir = interactive_input("5) Target directory for the new repo", default=f"../{repo_name}")
     
     # For push, let's do a simple yes/no prompt
     push_input = interactive_input("6) Push commits to remote? (yes/no)", default="no")
