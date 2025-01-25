@@ -1,0 +1,5 @@
+# Ignore cache files
+*.cache
+.cache/
+
+__pycache__/
