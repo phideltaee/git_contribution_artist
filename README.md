@@ -64,11 +64,13 @@ The easiest way for most users is via the interactive script, which prompts you 
     - Target directory where your new repository is created
     - Push to GitHub or not (yes/no)
 
-3. Preview: You’ll see a 7-row ASCII map of your planned commits (█ = a day with commits, . = no commits).
+3. Preview: You’ll see a 7-row ASCII map of your planned commits (█ = a day with commits, . = no commits). An example for the word "UpCircle.ai" below. 
+![Contribution Art Preview](assets/contribution_art_preview.png)
 
 4. Confirm: If you choose to proceed, the script creates (or cleans) a .git repo in your target directory and commits.
 
 5. Enjoy: If you opted to push, your design will appear in your contributions graph on GitHub shortly.
+![Heatmap Example](assets/heatmap_example.png)
 
 ## Cleaning Up Your Contribution Timeline - Deleting Repos
 
